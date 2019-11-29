@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "39139382058",
+    "firebase_url": "https://nineume-83e07.firebaseio.com",
+    "project_id": "nineume-83e07",
+    "storage_bucket": "nineume-83e07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39139382058:android:62b976cbc40414d13c4453",
+        "android_client_info": {
+          "package_name": "kr.ac.hansung.ume"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39139382058-h39g6k4o09lqq0gimphp7i6s6a8cp17q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCevy4unlt5QKAfeOrnJ-0Khk577mN4kWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39139382058-h39g6k4o09lqq0gimphp7i6s6a8cp17q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
