@@ -16,8 +16,9 @@ import com.google.firebase.database.ValueEventListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import kr.ac.hansung.ume.MainActivity;
+
 import kr.ac.hansung.ume.R;
+import kr.ac.hansung.ume.View.HomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -70,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                                 databaseReference.child("Member").child(partnerID).child("hasPartner").setValue("O"); // 파트너의 속성도 1로 설정
 
                                 databaseReference.child(id + partnerID).child("name").setValue(id + partnerID);// 자신의 아이디 + 파트너 아이디 조합으로 노드만들기, 이 상위 노드에 둘의 데이터 저장
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class); //메인 액티비티 수정 필요
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class); //메인 액티비티 수정 필요
                                 intent.putExtra("partnerID", partnerID); // 인텐트로 데이터 값 같이 보내서 디비에서 파트너 정보 가져와 설정
                                 startActivity(intent);
                                 finish();
