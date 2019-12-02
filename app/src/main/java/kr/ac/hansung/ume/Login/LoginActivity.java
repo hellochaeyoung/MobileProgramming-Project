@@ -67,9 +67,10 @@ public class LoginActivity extends AppCompatActivity {
                     if (pw.equals(dataSnapshot.child("Member").child(id).child("password").getValue())){// 아이디와 비밀번호가 일치하는지 확인
                         if ( hasPartner.equals(dataSnapshot.child("Member").child(id).child("hasPartner").getValue())){//아직 파트너가 정해지지 않앗는지 확인 ( X이면 정해지지않음, O이면 정해짐)
                             if(dataSnapshot.child("Member").hasChild(partnerID)){//파트너의 아이디가 가입된 아이디인지 확인
-                                databaseReference.child("Member").child(id).child("hasPartner").setValue("O"); // 1로 바꿔주고
-                                databaseReference.child("Member").child(partnerID).child("hasPartner").setValue("O"); // 파트너의 속성도 1로 설정
-
+                                databaseReference.child("Member").child(id).child("hasPartner").setValue("O"); // O로 바꿔주고
+                                databaseReference.child("Member").child(partnerID).child("hasPartner").setValue("O"); // 파트너의 속성도 O로 설정
+                                databaseReference.child("Member").child(id).child("partnerName").setValue(partnerID);//내 정보에 파트너 이름 저장
+                                databaseReference.child("Member").child(partnerID).child("partnerName").setValue(id); // 파트너 정보에도 내 이름 저장
                                 databaseReference.child(id + partnerID).child("name").setValue(id + partnerID);// 자신의 아이디 + 파트너 아이디 조합으로 노드만들기, 이 상위 노드에 둘의 데이터 저장
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class); //메인 액티비티 수정 필요
                                 intent.putExtra("partnerID", partnerID); // 인텐트로 데이터 값 같이 보내서 디비에서 파트너 정보 가져와 설정
@@ -80,6 +81,21 @@ public class LoginActivity extends AppCompatActivity {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setTitle("오류");
                                 builder.setMessage("파트너의 아이디가 존재하지 않습니다.");
+                                builder.setPositiveButton("OK", null);
+                                builder.create().show();
+                            }
+                        }
+                        else {
+                            if (partnerID.equals(dataSnapshot.child("Member").child(id).child("partnerName").getValue())){
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                intent.putExtra("partnerID", partnerID);
+                                startActivity(intent);
+                                finish();
+                            }
+                            else {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                                builder.setTitle("오류");
+                                builder.setMessage("파트너의 아이디가 일치하지 않습니다.");
                                 builder.setPositiveButton("OK", null);
                                 builder.create().show();
                             }
