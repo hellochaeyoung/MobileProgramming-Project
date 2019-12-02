@@ -15,6 +15,7 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
+import kr.ac.hansung.ume.Board.BoardActivity;
 import kr.ac.hansung.ume.Client.MQTTClient;
 import kr.ac.hansung.ume.R;
 
@@ -32,11 +33,13 @@ public class HomeActivity extends AppCompatActivity {
     private Button albumButton;
     private Button calendarButton;
 
+    public static Context homeContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        homeContext=this;
         setButton();
         setListener();
 
@@ -79,7 +82,7 @@ public class HomeActivity extends AppCompatActivity {
     View.OnClickListener BoardListener= new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent boardIntent=new Intent(HomeActivity.this,BoardActivity.class);
+            Intent boardIntent=new Intent(HomeActivity.this, BoardActivity.class);
             startActivity(boardIntent);
         }
     };

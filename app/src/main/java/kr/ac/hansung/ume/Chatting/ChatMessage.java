@@ -2,7 +2,6 @@ package kr.ac.hansung.ume.Chatting;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,22 +12,15 @@ import android.os.Message;
 //import android.support.v7.widget.Toolbar;
 //import android.view.GestureDetector;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 import kr.ac.hansung.ume.Client.MQTTClient;
-import kr.ac.hansung.ume.View.BoardActivity;
+import kr.ac.hansung.ume.Board.BoardActivity;
 import kr.ac.hansung.ume.View.HomeActivity;
 import kr.ac.hansung.ume.R;
 
