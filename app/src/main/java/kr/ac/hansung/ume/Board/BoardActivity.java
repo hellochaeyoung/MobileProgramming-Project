@@ -12,12 +12,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
-import java.io.ByteArrayOutputStream;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import kr.ac.hansung.ume.Board.CustomAdapter;
+import kr.ac.hansung.ume.Chatting.ChatMessage;
 import kr.ac.hansung.ume.R;
 import kr.ac.hansung.ume.View.HomeActivity;
 
@@ -25,7 +35,7 @@ public class BoardActivity extends AppCompatActivity {
     private ListView listView;
     private CustomAdapter adapter;
     private boolean isNew;//글이 추가되는 순간을 알려주기 위한 flag
-    public static Context context;//외부에서 Class에 설정된 멤버변수를 직접 제어하기 위한 context
+    public static Context boardContext;//외부에서 Class에 설정된 멤버변수를 직접 제어하기 위한 context
 
     private String newTitle;
     private String newContent;
@@ -37,13 +47,19 @@ public class BoardActivity extends AppCompatActivity {
     private Button albumButton;
     private Button calendarButton;
 
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+    private ItemDetail lastItem;//추가된 Item
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        context=this;
+        setContentView(R.layout.activity_board);
+        boardContext=this;
+
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
 
         isNew=false;
         newTitle="";
@@ -51,28 +67,56 @@ public class BoardActivity extends AppCompatActivity {
         newImage=BitmapFactory.decodeFile("C:\\Android\\Board\\app\\src\\main\\res\\drawable-v24\\peng.jpg");
         //초기화
         adapter=new CustomAdapter();
+
         listView=findViewById(R.id.listView);
+
 
         setData();
         setButton();
         setListener();
 
-
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(itemListener);
+        lastItem=adapter.getLast();
 
-
+        System.out.println(lastItem.getItemTitle());
         listThread thread=new listThread();
         thread.start();
 
 
+
     }
+
+
     Handler listHandler =new Handler(){//Thread클래스는 MainThread가 아니여서 UI를 건들 수 없기 때문에 Handler로 관리
         public void handleMessage(Message msg){
             // adapter=new CustomAdapter();
             listView.setAdapter(adapter);
+            lastItem=adapter.getLast();
+            System.out.println(lastItem.getItemTitle()+"ch");
         }
     };
+
+    ValueEventListener valueEventListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            if(dataSnapshot.child("Member").hasChild("board")){
+                    if(dataSnapshot.child("Member").hasChild("board")){
+                        if(dataSnapshot.child("Member").hasChild(""));
+                    }
+                    else
+                        dataSnapshot.child("Meber").child("board");
+
+
+
+            }
+        }
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+        }
+    };
+
     class listThread extends Thread{//계속 반복문을 돌며 새로운 글이 추가될 때 마다 array를 바꿔줌
         public void run(){
             while(true){
@@ -139,13 +183,12 @@ public class BoardActivity extends AppCompatActivity {
         boardButton.setOnClickListener(HomeListener);
 
     }
-
     View.OnClickListener ChatListener=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent chatIntent=new Intent(BoardActivity.this, kr.ac.hansung.ume.Chatting.ChatMessage.class);
-            HomeActivity homecontext=(HomeActivity)HomeActivity.context;
-            chatIntent.putExtra("dbArray",homecontext.getMessageArr());
+            Intent chatIntent=new Intent(BoardActivity.this, ChatMessage.class);
+            HomeActivity homeContext=(HomeActivity)HomeActivity.homeContext;
+            chatIntent.putExtra("dbArray",homeContext.getMessageArr());
             startActivity(chatIntent);
         }
     };

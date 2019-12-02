@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 import kr.ac.hansung.ume.Board.BoardActivity;
+import kr.ac.hansung.ume.Chatting.ChatMessage;
 import kr.ac.hansung.ume.Client.MQTTClient;
 import kr.ac.hansung.ume.R;
 
@@ -41,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
 
         homeContext=this;
         setButton();
-        //setListener();
+        setListener();
 
         context=this;
         newtopic="hi";
@@ -74,7 +75,7 @@ public class HomeActivity extends AppCompatActivity {
     View.OnClickListener ChatListener=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent chatIntent=new Intent(HomeActivity.this, kr.ac.hansung.ume.Chatting.ChatMessage.class);
+            Intent chatIntent=new Intent(HomeActivity.this, ChatMessage.class);
             chatIntent.putExtra("dbArray",messageArr);
             startActivity(chatIntent);
         }

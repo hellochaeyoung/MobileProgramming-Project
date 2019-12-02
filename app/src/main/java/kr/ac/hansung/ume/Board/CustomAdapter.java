@@ -1,5 +1,6 @@
 package kr.ac.hansung.ume.Board;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +15,10 @@ import java.util.ArrayList;
 
 import kr.ac.hansung.ume.R;
 
+
 public class CustomAdapter extends BaseAdapter {
     private ArrayList<ItemDetail> listCustom=new ArrayList<>();
+    private ItemDetail last;
     //LayoutInflater inflater;
     //Context context;
     //int layout;
@@ -56,7 +59,13 @@ public class CustomAdapter extends BaseAdapter {
 
         return convertView;
     }
+
+
     public void addItem(ItemDetail item){
         listCustom.add(item);
+    }
+
+    public ItemDetail getLast(){
+        return listCustom.get(listCustom.size()-1);
     }
 }

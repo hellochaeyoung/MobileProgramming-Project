@@ -1,10 +1,12 @@
 package kr.ac.hansung.ume.Board;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -36,7 +38,7 @@ public class NewBoard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newboard);
-        boardActivity=(BoardActivity) boardActivity.context;
+        boardActivity=(BoardActivity) boardActivity.boardContext;
         init();
 
 
@@ -65,13 +67,16 @@ public class NewBoard extends AppCompatActivity {
                 Intent intent=new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent,1);
-        }
+                 startActivityForResult(Intent.createChooser(intent,"Select Picture"),1);
+
+                }
     };
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {        if(requestCode==1){
-        if(requestCode==1)
-            if(requestCode==RESULT_OK){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode,resultCode,data);
+
+        if(requestCode==1){
+            if(resultCode==RESULT_OK){
                 try {
                     System.out.println("here?");
                     // 선택한 이미지에서 비트맵 생성
@@ -79,15 +84,21 @@ public class NewBoard extends AppCompatActivity {
                     Bitmap img = BitmapFactory.decodeStream(in);
                     in.close();
                     */
+                    Uri uri=data.getData();
+                    Bitmap img=MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
+                    int nh = (int) (img.getHeight() * (1024.0 / img.getWidth()));
+                    Bitmap scaled = Bitmap.createScaledBitmap(img, 1024, nh, true);
+
                     //Uri에서 이미지 이름을 얻어온다.
                     // String name_Str = getImageNameToUri(data.getData());
                     // 이미지 데이터를 비트맵으로 받아온다.
                     // Bitmap image_bitmap = Images.Media.getBitmap(getContentResolver(), data.getData());
                     // ImageView image = (ImageView)findViewById(R.id.imageView1);
 
+                    ImageView image=(ImageView)findViewById(R.id.imageView) ;
                    // System.out.println("Bitmap"+img);
                     // 이미지 표시
-                   // addimage.setImageBitmap(img);
+                    addimage.setImageBitmap(img);
                 } catch (Exception e) {
                     e.printStackTrace();
                     System.out.println("사진불러오기 실패");
