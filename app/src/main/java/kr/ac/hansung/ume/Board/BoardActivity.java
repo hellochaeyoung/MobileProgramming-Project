@@ -4,9 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -49,8 +52,10 @@ public class BoardActivity extends AppCompatActivity {
 
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
-    private ItemDetail lastItem;//추가된 Item
-
+   // private ItemDetail lastItem;//추가된 Item
+    private String dbName;
+    private int index=0;
+    private int lastIndex=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +66,7 @@ public class BoardActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference();
 
+
         isNew=false;
         newTitle="";
         newContent="";
@@ -70,18 +76,26 @@ public class BoardActivity extends AppCompatActivity {
 
         listView=findViewById(R.id.listView);
 
-
-        setData();
+        dbName=((HomeActivity)HomeActivity.homeContext).getDbName();
+        //setData();
+        databaseReference.addValueEventListener(valueEventListener);
+//        System.out.println(adapter.getItem(1));
         setButton();
         setListener();
+       // listView.setAdapter(adapter);
 
-        listView.setAdapter(adapter);
         listView.setOnItemClickListener(itemListener);
-        lastItem=adapter.getLast();
+     //   lastItem=adapter.getLast();
 
-        System.out.println(lastItem.getItemTitle());
+
+
+
+
+        //System.out.println(lastItem.getItemTitle());
         listThread thread=new listThread();
         thread.start();
+
+
 
 
 
@@ -90,30 +104,10 @@ public class BoardActivity extends AppCompatActivity {
 
     Handler listHandler =new Handler(){//Thread클래스는 MainThread가 아니여서 UI를 건들 수 없기 때문에 Handler로 관리
         public void handleMessage(Message msg){
-            // adapter=new CustomAdapter();
+             adapter=new CustomAdapter();
             listView.setAdapter(adapter);
-            lastItem=adapter.getLast();
-            System.out.println(lastItem.getItemTitle()+"ch");
-        }
-    };
-
-    ValueEventListener valueEventListener = new ValueEventListener() {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            if(dataSnapshot.child("Member").hasChild("board")){
-                    if(dataSnapshot.child("Member").hasChild("board")){
-                        if(dataSnapshot.child("Member").hasChild(""));
-                    }
-                    else
-                        dataSnapshot.child("Meber").child("board");
-
-
-
-            }
-        }
-        @Override
-        public void onCancelled(@NonNull DatabaseError databaseError) {
-
+            //lastItem=adapter.getLast();
+           // System.out.println(lastItem.getItemTitle()+"ch");
         }
     };
 
@@ -128,6 +122,7 @@ public class BoardActivity extends AppCompatActivity {
                     newItem.setItemTitle(newTitle);
                     newItem.setItemcontext(newContent);
                     adapter.addItem(newItem);
+//                    listView.setAdapter(adapter);
 
                     // listView.setAdapter(adapter);
                     Message msg=listHandler.obtainMessage();
@@ -169,15 +164,52 @@ public class BoardActivity extends AppCompatActivity {
 
     };
 
-    private void setData(){//초기설정
+    ValueEventListener valueEventListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            if (dataSnapshot.child(dbName).hasChild("board")) {
+                lastIndex = (Integer.parseInt((dataSnapshot.child(dbName).child("board").child("index")).getValue().toString()));
+                for (int i = 0; i <= lastIndex; i++) {
+                    String loopIndex = String.valueOf(i);
+                    String title = dataSnapshot.child(dbName).child("board").child(loopIndex).child("title").getValue().toString();
+                    String content = dataSnapshot.child(dbName).child("board").child(loopIndex).child("content").getValue().toString();
+                    String bitmapString = dataSnapshot.child(dbName).child("board").child(loopIndex).child("image").getValue().toString();
+                    System.out.println("dbtitle"+title);
+                    byte[] decodeByteArray = Base64.decode(bitmapString, Base64.NO_WRAP);
+                    Bitmap image = BitmapFactory.decodeByteArray(decodeByteArray, 0, decodeByteArray.length); // String -> Bitmap 변환
+
+                    ItemDetail newItem = new ItemDetail();
+                    newItem.setItemTitle(title);
+                    newItem.setItmeImage(image);
+                    newItem.setItemcontext(content);
+
+                    adapter.addItem(newItem);
+                    System.out.println(newItem.getItemcontent()+"contentlater");
+                    System.out.println(adapter.getItem(0));
+                }
+                System.out.println(adapter.getItem(1));
+                lastIndex++;
+
+            }
+            listView.setAdapter(adapter);
+            databaseReference.removeEventListener(valueEventListener);
+
+        }
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+        }
+    };
+    /*private void setData(){//초기설정
         ItemDetail peng=new ItemDetail();
         Bitmap bitmap= BitmapFactory.decodeResource(getResources(),R.drawable.peng);
         peng.setItmeImage(bitmap);
         peng.setItemTitle("Hi Pengsoo");
         peng.setItemcontext("PengPeng!!!!!!!!!!");
 
+
         adapter.addItem(peng);
-    }
+    }*/
     public void setListener(){
         chatButton.setOnClickListener(ChatListener);
         boardButton.setOnClickListener(HomeListener);
@@ -207,6 +239,14 @@ public class BoardActivity extends AppCompatActivity {
         chatButton = (Button)findViewById(R.id.chatButton);
         albumButton = (Button)findViewById(R.id.albumButton);
         calendarButton = (Button)findViewById(R.id.calendarButton);
+    }
+
+    public int getIndex() {
+        return lastIndex;
+    }
+
+    public void setIndex(int index) {
+        this.lastIndex = index;
     }
 
     public boolean isNew() {

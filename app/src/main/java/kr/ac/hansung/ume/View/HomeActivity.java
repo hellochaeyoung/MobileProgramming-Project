@@ -236,6 +236,10 @@ public class HomeActivity extends AppCompatActivity {
         user2HomeProfileText = findViewById(R.id.user2HomeProfileText);
     }
 
+    public String getDbName() {
+        return dbName;
+    }
+
     public MQTTClient getMQTTClient() {
         return client;
     }

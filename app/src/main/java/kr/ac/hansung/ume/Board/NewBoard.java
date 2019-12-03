@@ -9,11 +9,15 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -21,6 +25,7 @@ import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 import kr.ac.hansung.ume.R;
+import kr.ac.hansung.ume.View.HomeActivity;
 
 public class NewBoard extends AppCompatActivity {
     final int REQ_CODE_SELECT_IMAGE=100;
@@ -32,6 +37,13 @@ public class NewBoard extends AppCompatActivity {
 
     public BoardActivity boardActivity;
 
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+
+    private String dbName;
+
+    private int index ;
+
 
 
     @Override
@@ -40,7 +52,11 @@ public class NewBoard extends AppCompatActivity {
         setContentView(R.layout.activity_newboard);
         boardActivity=(BoardActivity) boardActivity.boardContext;
         init();
+        index=boardActivity.getIndex();
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
 
+        dbName = ((HomeActivity)HomeActivity.homeContext).getDbName();
 
 
 
@@ -105,6 +121,13 @@ public class NewBoard extends AppCompatActivity {
                 ByteArrayOutputStream stream=new ByteArrayOutputStream();
                 image.compress(Bitmap.CompressFormat.JPEG,100,stream);
                 byte[] bytes=stream.toByteArray();
+                databaseReference.child(dbName).child("board").child(Integer.toString(index)).child("image").setValue(getString(image));
+                databaseReference.child(dbName).child("board").child(Integer.toString(index)).child("title").setValue(title);
+                databaseReference.child(dbName).child("board").child(Integer.toString(index)).child("content").setValue(content);
+                databaseReference.child(dbName).child("board").child("index").setValue(index);
+
+                index++;
+                boardActivity.setIndex(index);
 
                boardActivity.setNewTitle(title);
                 boardActivity.setNewContent(content);
@@ -117,5 +140,12 @@ public class NewBoard extends AppCompatActivity {
             }
         }
     };
+
+    public String getString(Bitmap bitmap){
+        ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+        byte[] imageBytes=byteArrayOutputStream.toByteArray();
+        return Base64.encodeToString(imageBytes,Base64.NO_WRAP);
+    }
 
 }
