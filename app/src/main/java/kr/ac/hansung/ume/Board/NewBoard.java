@@ -79,25 +79,11 @@ public class NewBoard extends AppCompatActivity {
             if(resultCode==RESULT_OK){
                 try {
                     System.out.println("here?");
-                    // 선택한 이미지에서 비트맵 생성
-                    /*InputStream in = getContentResolver().openInputStream(data.getData());
-                    Bitmap img = BitmapFactory.decodeStream(in);
-                    in.close();
-                    */
                     Uri uri=data.getData();
                     Bitmap img=MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
                     int nh = (int) (img.getHeight() * (1024.0 / img.getWidth()));
                     Bitmap scaled = Bitmap.createScaledBitmap(img, 1024, nh, true);
-
-                    //Uri에서 이미지 이름을 얻어온다.
-                    // String name_Str = getImageNameToUri(data.getData());
-                    // 이미지 데이터를 비트맵으로 받아온다.
-                    // Bitmap image_bitmap = Images.Media.getBitmap(getContentResolver(), data.getData());
-                    // ImageView image = (ImageView)findViewById(R.id.imageView1);
-
                     ImageView image=(ImageView)findViewById(R.id.imageView) ;
-                   // System.out.println("Bitmap"+img);
-                    // 이미지 표시
                     addimage.setImageBitmap(img);
                 } catch (Exception e) {
                     e.printStackTrace();
