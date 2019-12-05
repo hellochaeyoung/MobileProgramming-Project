@@ -1,11 +1,8 @@
 package kr.ac.hansung.ume.Calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -14,40 +11,22 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-import java.util.List;
-
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.widget.BaseAdapter;
-
 
 
 import kr.ac.hansung.ume.R;
 
 public class CalendarActivity extends AppCompatActivity {
-    /**
-     * 연/월 텍스트뷰
-     */
     private TextView tvDate;
-    /**
-     * 그리드뷰 어댑터
-     */
+
     private GridAdapter gridAdapter;
 
-    /**
-     * 일 저장 할 리스트
-     */
     private ArrayList<String> dayList;
 
-    /**
-     * 그리드뷰
-     */
     private GridView gridView;
 
-    /**
-     * 캘린더 변수
-     */
     private Calendar mCal;
+
+    private static ViewHolder viewHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,21 +34,29 @@ public class CalendarActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_calendar);
 
-        tvDate = (TextView)findViewById(R.id.tv_date);
-        gridView = (GridView)findViewById(R.id.gridview);
 
-        // 오늘에 날짜를 세팅 해준다.
-        long now = System.currentTimeMillis();
-        final Date date = new Date(now);
-        //연,월,일을 따로 저장
+        viewHolder = new ViewHolder();
+
+        tvDate = (TextView)findViewById(R.id.dateTextView);
+        gridView = (GridView)findViewById(R.id.gridView);
+
+        // 오늘 날짜 세
+        long now = System.currentTimeMillis(); // 현 시간을 밀리초 단위로 받기
+        final Date date = new Date(now); // 1970년 1월 1일 0시 0초 부터 msec를 1/1000초 단위로 하여 경과한 날짜와 시간을 저장
+
+        // 시간 포멧 설정
+        // Date() 클래스와 Calendar 클래스를
+        // SimpleDateFormat 에 format()으로 포매팅 하면
+        // 앞서 현재 날짜 시간으로 지정한 포맷으로 데이터를 변환
         final SimpleDateFormat curYearFormat = new SimpleDateFormat("yyyy", Locale.KOREA);
         final SimpleDateFormat curMonthFormat = new SimpleDateFormat("MM", Locale.KOREA);
         final SimpleDateFormat curDayFormat = new SimpleDateFormat("dd", Locale.KOREA);
 
-        //현재 날짜 텍스트뷰에 뿌려줌
+        // 년/월 형식으로 현재 날짜를 Text View 의 Text 로 지정환
+        // yyyy/MM/dd
         tvDate.setText(curYearFormat.format(date) + "/" + curMonthFormat.format(date));
 
-        //gridview 요일 표시
+        //GridView 요일 표시를 위해 ArrayList에 요일 문자 데이터 저장
         dayList = new ArrayList<String>();
         dayList.add("일");
         dayList.add("월");
@@ -79,11 +66,18 @@ public class CalendarActivity extends AppCompatActivity {
         dayList.add("금");
         dayList.add("토");
 
-        mCal = Calendar.getInstance();
+        mCal = Calendar.getInstance(); // 현재 날짜와 시간 정보를 가진 Calendar 객체를 생성
+
+        /* 오늘 날을 기준으로 요일 구하고, List에 저장 */
 
         //이번달 1일 무슨요일인지 판단 mCal.set(Year,Month,Day)
+        // currentTimeMillis() 를 통해 얻은 밀리초를 바탕으로
+        // Date() 객체 생성하고 이 객체를 바탕으로 포맷을 지정해 날짜를 구했음 ('월' 이 +1 , -1 된 값이 아니다)
+        // 따라서 Date 객체를 통해 얻은 Month 로 Calendar 의 날짜를 지정해주려면
+        // 구한 값에서 -1 해 줘야 한다. (Calendar에서 나타내는 달은 == (현재 달 - 1))
         mCal.set(Integer.parseInt(curYearFormat.format(date)), Integer.parseInt(curMonthFormat.format(date)) - 1, 1);
         int dayNum = mCal.get(Calendar.DAY_OF_WEEK);
+
         //1일 - 요일 매칭 시키기 위해 공백 add
         for (int i = 1; i < dayNum; i++) {
             dayList.add("");
@@ -95,87 +89,23 @@ public class CalendarActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * 해당 월에 표시할 일 수 구함
-     *
-     * @param month
-     */
+    public static ViewHolder getViewHolder() { return viewHolder; }
+
     private void setCalendarDate(int month) {
+        // Calendar의 Month 를 지정
         mCal.set(Calendar.MONTH, month - 1);
 
+        // 요일 정보를 배열 리스트에 추가
         for (int i = 0; i < mCal.getActualMaximum(Calendar.DAY_OF_MONTH); i++) {
             dayList.add("" + (i + 1));
         }
 
     }
 
-    /**
-     * 그리드뷰 어댑터
-     *
-     */
-    private class GridAdapter extends BaseAdapter {
 
-        private final List<String> list;
-
-        private final LayoutInflater inflater;
-
-        /**
-         * 생성자
-         *
-         * @param context
-         * @param list
-         */
-        public GridAdapter(Context context, List<String> list) {
-            this.list = list;
-            this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        }
-
-        @Override
-        public int getCount() {
-            return list.size();
-        }
-
-        @Override
-        public String getItem(int position) {
-            return list.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            ViewHolder holder = null;
-
-            if (convertView == null) {
-                convertView = inflater.inflate(R.layout.item_calendar_gridview, parent, false);
-                holder = new ViewHolder();
-
-                holder.tvItemGridView = (TextView)convertView.findViewById(R.id.tv_item_gridview);
-
-                convertView.setTag(holder);
-            } else {
-                holder = (ViewHolder)convertView.getTag();
-            }
-            holder.tvItemGridView.setText("" + getItem(position));
-
-            //해당 날짜 텍스트 컬러,배경 변경
-            mCal = Calendar.getInstance();
-            //오늘 day 가져옴
-            Integer today = mCal.get(Calendar.DAY_OF_MONTH);
-            String sToday = String.valueOf(today);
-            if (sToday.equals(getItem(position))) { //오늘 day 텍스트 컬러 변경
-                holder.tvItemGridView.setTextColor(getResources().getColor(R.color.color_000000));
-            }
-            return convertView;
-        }
-    }
-
-    private class ViewHolder {
+    public class ViewHolder {
         TextView tvItemGridView;
     }
+
 }
 
