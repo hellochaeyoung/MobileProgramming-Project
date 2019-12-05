@@ -1,6 +1,7 @@
 package kr.ac.hansung.ume.Calendar;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,18 +15,22 @@ import kr.ac.hansung.ume.R;
 
 public class GridAdapter extends BaseAdapter {
 
-        private final List<String> list;
+        private final List<Integer> list;
 
         private final LayoutInflater inflater;
 
         private Calendar mCal;
 
-        private Context calendarActivity;
+        private Context context; // Calendar Activity Context
+
+        private CalendarActivity calendarActivity = ((CalendarActivity)CalendarActivity.context);
+
+
 
 
         // Adapter 생성자 : 리스트 설정, Inflater 생성
-        public GridAdapter(Context context, List<String> list) {
-            this.calendarActivity = context; // Calendar Activity 의 Context
+        public GridAdapter(Context context, List<Integer> list) {
+            this.context = context; // Calendar Activity 의 Context
             this.list = list; // Calendar Activity 에서 초기화 dayList 넘겨받음
             this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
@@ -36,7 +41,7 @@ public class GridAdapter extends BaseAdapter {
         }
 
         @Override
-        public String getItem(int position) {
+        public Integer getItem(int position) {
             return list.get(position);
         }
 
@@ -62,16 +67,35 @@ public class GridAdapter extends BaseAdapter {
             } else {
                 holder = (CalendarActivity.ViewHolder) convertView.getTag();
             }
-            holder.tvItemGridView.setText("" + getItem(position));
+            //holder.tvItemGridView.setText("" + getItem(position));
+            //holder.tvItemGridView.setText(calendarActivity.getDayList().get(position).toString());
 
+
+            /*
             //해당 날짜 텍스트 컬러,배경 변경
             mCal = Calendar.getInstance();
-            //오늘 day 가져옴
+            // DAY_OF_MONTH 현재 월의 날짜 == DATE 와 동일
             Integer today = mCal.get(Calendar.DAY_OF_MONTH);
             String sToday = String.valueOf(today);
             if (sToday.equals(getItem(position))) { //오늘 day 텍스트 컬러 변경
-                holder.tvItemGridView.setTextColor(calendarActivity.getResources().getColor(R.color.color_000000));
+                holder.tvItemGridView.setTextColor(context.getResources().getColor(R.color.colorWhite));
             }
+             */
+
+            // 글자 색상 변경
+            if(position % (CalendarActivity.DAYS_OF_WEEK) == 0) holder.tvItemGridView.setTextColor(Color.parseColor("#ff1200"));
+            else holder.tvItemGridView.setTextColor(Color.parseColor("#676d6e"));
+
+            if(position < calendarActivity.preMonthTailOffset
+                || position >= calendarActivity.preMonthTailOffset + calendarActivity.currentMonthMaxDate)
+                holder.tvItemGridView.setAlpha(0.3f);
+
+            else
+                holder.tvItemGridView.setAlpha(1f);
+
+            holder.tvItemGridView.setText(calendarActivity.getDayList().get(position).toString());
+
+
             return convertView;
         }
 

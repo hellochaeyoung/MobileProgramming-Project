@@ -636,10 +636,10 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color colorAccent
+color colorBlack
 color colorPrimary
 color colorPrimaryDark
-color color_000000
-color color_ffffff
+color colorWhite
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1228,6 +1228,7 @@ id fixed
 id forever
 id fragment_register_email
 id fragment_verify_phone
+id friday
 id ghost_view
 id gone
 id google_button
@@ -1271,6 +1272,7 @@ id message
 id messageTextView
 id middle
 id mini
+id monday
 id monthEditText
 id monthTextView
 id mtrl_child_content_container
@@ -1282,6 +1284,7 @@ id nameTextView
 id name_layout
 id navigation_header_container
 id never
+id nextMonthButton
 id none
 id normal
 id notification_background
@@ -1304,6 +1307,7 @@ id phone_button
 id phone_layout
 id phone_number
 id pin
+id previousMonthButton
 id progress_circular
 id progress_horizontal
 id progress_msg
@@ -1317,6 +1321,7 @@ id right
 id right_icon
 id right_side
 id root
+id saturday
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1364,6 +1369,7 @@ id stretch
 id submenuarrow
 id submit_area
 id submit_confirmation_code
+id sunday
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1377,6 +1383,7 @@ id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id thursday
 id ticker
 id time
 id title
@@ -1392,6 +1399,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id trouble_signing_in
+id tuesday
 id tv_item_gridview
 id twitter_button
 id uniform
@@ -1404,6 +1412,7 @@ id user2HomeProfileButton
 id user2HomeProfileText
 id view_offset_helper
 id visible
+id wednesday
 id welcome_back_idp_button
 id welcome_back_idp_prompt
 id welcome_back_password_body
