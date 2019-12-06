@@ -3,10 +3,13 @@ package kr.ac.hansung.ume.Calendar.Schedule;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import kr.ac.hansung.ume.R;
 
@@ -22,7 +25,11 @@ public class ScheduleEditActivity extends AppCompatActivity {
 
     private Button editButton;
 
+    private Button closeButton;
+
     public static Context context;
+
+    private ArrayList<Schedule> schedules = new ArrayList<Schedule>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +43,19 @@ public class ScheduleEditActivity extends AppCompatActivity {
         scheduleContentEditText = (EditText)findViewById(R.id.scheduleContentEditText);
         pickedTimeTextView = (TextView)findViewById(R.id.pickedTimeTextView);
         editButton = (Button)findViewById(R.id.editButton);
+        closeButton = (Button)findViewById(R.id.closeButton);
+
 
         editButton.setOnClickListener(new EditScheduleButtonOnClickListener());
+        closeButton.setOnClickListener(new EditScheduleButtonOnClickListener());
+
+        Intent intent = getIntent();
+
+        String date = intent.getExtras().getString("Date");
+        dateTextView.setText(date);
     }
 
 
-
-    public TextView getDateTextView() { return dateTextView; }
 
     public EditText getScheduleNameEditText() { return scheduleNameEditText; }
 
@@ -50,5 +63,5 @@ public class ScheduleEditActivity extends AppCompatActivity {
 
     public TextView getPickedTimeTextView() { return pickedTimeTextView; }
 
-    public Button getEditButton() { return editButton; }
+    public ArrayList<Schedule> getSchedules() { return schedules; }
 }

@@ -75,9 +75,9 @@ public class CalendarActivity extends AppCompatActivity {
         gridView.setAdapter(gridAdapter);
 
         // GridView 와 GridAdapter 생성 후 Listener 생성
-        //View.OnClickListener changeMonthButtonOnClickListener = new ChangeMonthButtonOnClickListener();
-        preMonthButton.setOnClickListener(new ChangeMonthButtonOnClickListener());
-        nextMonthButton.setOnClickListener(new ChangeMonthButtonOnClickListener());
+        View.OnClickListener changeMonthButtonOnClickListener = new ChangeMonthButtonOnClickListener();
+        preMonthButton.setOnClickListener(changeMonthButtonOnClickListener);
+        nextMonthButton.setOnClickListener(changeMonthButtonOnClickListener);
 
     }
 
@@ -183,7 +183,7 @@ public class CalendarActivity extends AppCompatActivity {
 
     protected ArrayList<Integer> getDayList() { return dayList; }
 
-
+    public Calendar getmCal(){ return mCal; }
     // 클릭 시 액티비티 변경 리스너 생성
     public class ViewHolder {
         TextView tvItemGridView;

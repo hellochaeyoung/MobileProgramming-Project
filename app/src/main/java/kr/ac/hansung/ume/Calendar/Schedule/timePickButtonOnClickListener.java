@@ -22,5 +22,6 @@ public class timePickButtonOnClickListener implements View.OnClickListener {
                         }, // 값설정시 호출될 리스너 등록
                         4,19, false);
 
+        dialog.show();
     }
 }
