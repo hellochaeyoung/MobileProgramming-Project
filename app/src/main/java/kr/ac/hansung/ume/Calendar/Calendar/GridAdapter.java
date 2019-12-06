@@ -1,4 +1,4 @@
-package kr.ac.hansung.ume.Calendar;
+package kr.ac.hansung.ume.Calendar.Calendar;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -67,20 +67,6 @@ public class GridAdapter extends BaseAdapter {
             } else {
                 holder = (CalendarActivity.ViewHolder) convertView.getTag();
             }
-            //holder.tvItemGridView.setText("" + getItem(position));
-            //holder.tvItemGridView.setText(calendarActivity.getDayList().get(position).toString());
-
-
-            /*
-            //해당 날짜 텍스트 컬러,배경 변경
-            mCal = Calendar.getInstance();
-            // DAY_OF_MONTH 현재 월의 날짜 == DATE 와 동일
-            Integer today = mCal.get(Calendar.DAY_OF_MONTH);
-            String sToday = String.valueOf(today);
-            if (sToday.equals(getItem(position))) { //오늘 day 텍스트 컬러 변경
-                holder.tvItemGridView.setTextColor(context.getResources().getColor(R.color.colorWhite));
-            }
-             */
 
             // 글자 색상 변경
             if(position % (CalendarActivity.DAYS_OF_WEEK) == 0) holder.tvItemGridView.setTextColor(Color.parseColor("#ff1200"));
@@ -94,6 +80,7 @@ public class GridAdapter extends BaseAdapter {
                 holder.tvItemGridView.setAlpha(1f);
 
             holder.tvItemGridView.setText(calendarActivity.getDayList().get(position).toString());
+            holder.tvItemGridView.setOnClickListener(new DateOnClickListener());
 
 
             return convertView;

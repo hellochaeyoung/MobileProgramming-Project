@@ -1,4 +1,4 @@
-package kr.ac.hansung.ume.Calendar;
+package kr.ac.hansung.ume.Calendar.Calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -77,9 +75,9 @@ public class CalendarActivity extends AppCompatActivity {
         gridView.setAdapter(gridAdapter);
 
         // GridView 와 GridAdapter 생성 후 Listener 생성
-        View.OnClickListener changeMonthButtonOnClickListener = new ChangeMonthButtonOnClickListener();
-        preMonthButton.setOnClickListener(changeMonthButtonOnClickListener);
-        nextMonthButton.setOnClickListener(changeMonthButtonOnClickListener);
+        //View.OnClickListener changeMonthButtonOnClickListener = new ChangeMonthButtonOnClickListener();
+        preMonthButton.setOnClickListener(new ChangeMonthButtonOnClickListener());
+        nextMonthButton.setOnClickListener(new ChangeMonthButtonOnClickListener());
 
     }
 
@@ -184,8 +182,6 @@ public class CalendarActivity extends AppCompatActivity {
     protected GridView getGridView() { return gridView; }
 
     protected ArrayList<Integer> getDayList() { return dayList; }
-
-    //protected TextView getTvDate() { return tvDate; }
 
 
     // 클릭 시 액티비티 변경 리스너 생성

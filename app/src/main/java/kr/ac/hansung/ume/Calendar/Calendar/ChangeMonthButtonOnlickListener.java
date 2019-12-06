@@ -1,4 +1,4 @@
-package kr.ac.hansung.ume.Calendar;
+package kr.ac.hansung.ume.Calendar.Calendar;
 
 import android.view.View;
 import android.widget.Button;

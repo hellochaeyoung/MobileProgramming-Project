@@ -12,16 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Calendar.CalendarActivity">
-        <!--<activity android:name=".Login.LoginActivity"> -->
+        <activity android:name=".Calendar.Schedule.ScheduleEditActivity"></activity>
+        <activity android:name=".Calendar.Schedule.ScheduleDetailActivity" />
+        <activity android:name=".Calendar.Schedule.ScheduleActivity" />
+        <activity android:name=".Calendar.Calendar.CalendarActivity">
 
-        <intent-filter>
+            <!-- <activity android:name=".Login.LoginActivity"> -->
+
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- <activity android:name=".Calendar.CalendarActivity" /> -->
+        </activity> <!-- <activity android:name=".Calendar.CalendarActivity" /> -->
         <activity android:name=".Login.AssignActivity" />
         <activity android:name=".View.BoardActivity" />
         <activity android:name=".Chatting.ChatMessage" />

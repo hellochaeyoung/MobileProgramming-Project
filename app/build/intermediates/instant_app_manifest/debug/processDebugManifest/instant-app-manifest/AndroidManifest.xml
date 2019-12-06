@@ -25,7 +25,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="kr.ac.hansung.ume.Calendar.CalendarActivity" >
+        <activity android:name="kr.ac.hansung.ume.Calendar.Schedule.ScheduleEditActivity" />
+        <activity android:name="kr.ac.hansung.ume.Calendar.Schedule.ScheduleDetailActivity" />
+        <activity android:name="kr.ac.hansung.ume.Calendar.Schedule.ScheduleActivity" />
+        <activity android:name="kr.ac.hansung.ume.Calendar.Calendar.CalendarActivity" >
 
             <!-- <activity android:name=".Login.LoginActivity"> -->
 
@@ -34,8 +37,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- <activity android:name=".Calendar.CalendarActivity" /> -->
+        </activity> <!-- <activity android:name=".Calendar.CalendarActivity" /> -->
         <activity android:name="kr.ac.hansung.ume.Login.AssignActivity" />
         <activity android:name="kr.ac.hansung.ume.View.BoardActivity" />
         <activity android:name="kr.ac.hansung.ume.Chatting.ChatMessage" />
