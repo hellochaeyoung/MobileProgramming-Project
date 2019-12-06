@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import kr.ac.hansung.ume.Board.BoardActivity;
+import kr.ac.hansung.ume.Calendar.Calendar.CalendarActivity;
 import kr.ac.hansung.ume.Chatting.ChatMessage;
 import kr.ac.hansung.ume.Client.MQTTClient;
 import kr.ac.hansung.ume.R;
@@ -198,6 +199,7 @@ public class HomeActivity extends AppCompatActivity {
     public void setListener(){
         chatButton.setOnClickListener(ChatListener);
         boardButton.setOnClickListener(BoardListener);
+        calendarButton.setOnClickListener(CalendarListener);
 
     }
 
@@ -214,6 +216,14 @@ public class HomeActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent boardIntent=new Intent(HomeActivity.this, BoardActivity.class);
             startActivity(boardIntent);
+        }
+    };
+
+    View.OnClickListener CalendarListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            Intent calendarIntent = new Intent(HomeActivity.this, CalendarActivity.class);
+            startActivity(calendarIntent);
         }
     };
 
