@@ -3,6 +3,7 @@ package kr.ac.hansung.ume.Calendar.Calendar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -78,6 +79,11 @@ public class CalendarActivity extends AppCompatActivity {
         View.OnClickListener changeMonthButtonOnClickListener = new ChangeMonthButtonOnClickListener();
         preMonthButton.setOnClickListener(changeMonthButtonOnClickListener);
         nextMonthButton.setOnClickListener(changeMonthButtonOnClickListener);
+
+        Intent intent = getIntent();
+        if(intent.getStringExtra("schedule") != null) {
+
+        }
 
     }
 
@@ -184,6 +190,8 @@ public class CalendarActivity extends AppCompatActivity {
     protected ArrayList<Integer> getDayList() { return dayList; }
 
     public Calendar getmCal(){ return mCal; }
+
+
     // 클릭 시 액티비티 변경 리스너 생성
     public class ViewHolder {
         TextView tvItemGridView;

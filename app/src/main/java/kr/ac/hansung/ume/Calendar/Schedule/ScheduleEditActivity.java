@@ -53,6 +53,8 @@ public class ScheduleEditActivity extends AppCompatActivity {
 
         String date = intent.getExtras().getString("Date");
         dateTextView.setText(date);
+
+
     }
 
 

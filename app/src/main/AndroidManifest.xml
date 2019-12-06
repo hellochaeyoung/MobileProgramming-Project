@@ -13,8 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Calendar.Schedule.ScheduleEditActivity"></activity>
-        <activity android:name=".Calendar.Schedule.ScheduleDetailActivity" />
-        <activity android:name=".Calendar.Schedule.ScheduleActivity" />
         <activity android:name=".Calendar.Calendar.CalendarActivity">
 
             <!-- <activity android:name=".Login.LoginActivity"> -->

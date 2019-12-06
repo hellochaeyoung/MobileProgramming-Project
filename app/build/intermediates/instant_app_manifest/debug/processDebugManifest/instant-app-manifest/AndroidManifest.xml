@@ -26,8 +26,6 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="kr.ac.hansung.ume.Calendar.Schedule.ScheduleEditActivity" />
-        <activity android:name="kr.ac.hansung.ume.Calendar.Schedule.ScheduleDetailActivity" />
-        <activity android:name="kr.ac.hansung.ume.Calendar.Schedule.ScheduleActivity" />
         <activity android:name="kr.ac.hansung.ume.Calendar.Calendar.CalendarActivity" >
 
             <!-- <activity android:name=".Login.LoginActivity"> -->

@@ -1181,6 +1181,7 @@ id chronometer
 id circular
 id clip_horizontal
 id clip_vertical
+id closeButton
 id collapseActionView
 id confirmation_code
 id confirmation_code_layout
@@ -1327,7 +1328,6 @@ id saturday
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
-id scheduleAddButton
 id scheduleContentEditText
 id scheduleContentTextView
 id scheduleNameEditText
@@ -1489,8 +1489,6 @@ layout activity_home
 layout activity_login
 layout activity_main
 layout activity_messageadapter
-layout activity_schedule
-layout activity_schedule_detail
 layout activity_schedule_edit
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

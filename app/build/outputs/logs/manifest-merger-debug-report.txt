@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-auth-4.0.0.aar/0c43cb8d7766e014d984521be0cb3375/AndroidManifest.xml:2:1-93:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/jetified-library-1.4.2.aar/07f24a0138ab92f45b90cd5b3e596c2f/AndroidManifest.xml:6:1-16:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/c1ebb7af0287092be0e884e263df7ebe/AndroidManifest.xml:17:1-24:12
@@ -66,20 +66,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/nayeon/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/a326b37cea7ead56e5eb4ee083655c67/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/89781a13d5a6549bedb3f5eb7e20d734/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/firebase-database-collection-16.0.1.aar/1213e8362fe3be8e75efb32bee9ec1da/AndroidManifest.xml:2:1-7:12
-INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:3:5-32
 		INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:2:11-69
@@ -120,7 +120,7 @@ MERGED from [com.google.firebase:firebase-iid:19.0.0] /Users/nayeon/.gradle/cach
 	android:name
 		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:8:5-34:19
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:8:5-32:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-auth-4.0.0.aar/0c43cb8d7766e014d984521be0cb3375/AndroidManifest.xml:15:5-91:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-auth-4.0.0.aar/0c43cb8d7766e014d984521be0cb3375/AndroidManifest.xml:15:5-91:19
 MERGED from [com.google.android.material:material:1.0.0] /Users/nayeon/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/c1ebb7af0287092be0e884e263df7ebe/AndroidManifest.xml:22:5-20
@@ -193,48 +193,40 @@ activity#kr.ac.hansung.ume.Calendar.Schedule.ScheduleEditActivity
 ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:15:9-85
 	android:name
 		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:15:19-73
-activity#kr.ac.hansung.ume.Calendar.Schedule.ScheduleDetailActivity
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:16:9-78
-	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:16:19-75
-activity#kr.ac.hansung.ume.Calendar.Schedule.ScheduleActivity
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:17:9-72
-	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:17:19-69
 activity#kr.ac.hansung.ume.Calendar.Calendar.CalendarActivity
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:18:9-27:20
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:16:9-25:20
 	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:18:19-69
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:16:19-69
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:22:13-26:29
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:23:17-69
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:23:25-66
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:25:17-77
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:23:27-74
 activity#kr.ac.hansung.ume.Login.AssignActivity
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:26:9-58
+	android:name
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:26:19-55
+activity#kr.ac.hansung.ume.View.BoardActivity
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:27:9-56
+	android:name
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:27:19-53
+activity#kr.ac.hansung.ume.Chatting.ChatMessage
 ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:28:9-58
 	android:name
 		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:28:19-55
-activity#kr.ac.hansung.ume.View.BoardActivity
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:29:9-56
-	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:29:19-53
-activity#kr.ac.hansung.ume.Chatting.ChatMessage
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:30:9-58
-	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:30:19-55
 activity#kr.ac.hansung.ume.View.HomeActivity
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:31:9-55
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:29:9-55
 	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:31:19-52
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:29:19-52
 service#org.eclipse.paho.android.service.MqttService
-ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:33:9-80
+ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:31:9-80
 	android:name
-		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:33:18-77
+		ADDED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml:31:18-77
 uses-sdk
 INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/nayeon/AndroidProject/Nine_UME/app/src/main/AndroidManifest.xml

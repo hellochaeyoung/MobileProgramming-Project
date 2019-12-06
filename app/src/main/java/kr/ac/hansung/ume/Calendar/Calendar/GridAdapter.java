@@ -80,7 +80,9 @@ public class GridAdapter extends BaseAdapter {
                 holder.tvItemGridView.setAlpha(1f);
 
             holder.tvItemGridView.setText(calendarActivity.getDayList().get(position).toString());
-            holder.tvItemGridView.setOnClickListener(new DateOnClickListener((position+1) - calendarActivity.preMonthTailOffset));
+            holder.tvItemGridView.setOnClickListener(
+                    new DateOnClickListener(((position+1) - calendarActivity.preMonthTailOffset),
+                    holder.tvItemGridView));
 
 
             return convertView;

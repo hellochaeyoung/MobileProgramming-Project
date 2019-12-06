@@ -3,10 +3,24 @@ package kr.ac.hansung.ume.Calendar.Schedule;
 import android.content.Intent;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import kr.ac.hansung.ume.R;
 import kr.ac.hansung.ume.Calendar.Calendar.CalendarActivity;
 
 public class EditScheduleButtonOnClickListener implements View.OnClickListener {
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = database.getReference();
+
+    //private String dbName =
+
     @Override
     public void onClick(View view){
         ScheduleEditActivity scheduleEditActivity;
@@ -21,10 +35,13 @@ public class EditScheduleButtonOnClickListener implements View.OnClickListener {
                 schedule.setContent(scheduleEditActivity.getScheduleContentEditText().getText().toString());
                 schedule.setTime(scheduleEditActivity.getPickedTimeTextView().getText().toString());
 
+
+
                 System.out.println("=== Schedule Object ===" + " " + schedule.toString());
                 scheduleEditActivity.getSchedules().add(schedule); // 배열 리스트에 일정 객체 추가
 
                 intent = new Intent(ScheduleEditActivity.context, CalendarActivity.class);
+                intent.putExtra("schedule", "ok");
                 ScheduleEditActivity.context.startActivity(intent);
                 break;
 
@@ -35,4 +52,16 @@ public class EditScheduleButtonOnClickListener implements View.OnClickListener {
                 break;
         }
     }
+
+    ValueEventListener valueEventListener  = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            //if (dataSnapshot.child())
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+        }
+    };
 }
