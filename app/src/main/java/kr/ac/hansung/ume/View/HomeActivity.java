@@ -57,7 +57,6 @@ public class HomeActivity extends AppCompatActivity {
     private Button homeButton;
     private Button boardButton;
     private Button chatButton;
-    private Button albumButton;
     private Button calendarButton;
 
     public static Context homeContext;
@@ -232,7 +231,6 @@ public class HomeActivity extends AppCompatActivity {
         homeButton = (Button)findViewById(R.id.homeButton);
         boardButton = (Button)findViewById(R.id.boardButton);
         chatButton = (Button)findViewById(R.id.chatButton);
-        albumButton = (Button)findViewById(R.id.albumButton);
         calendarButton = (Button)findViewById(R.id.calendarButton);
 
         user1HomeProfileButton = findViewById(R.id.user1HomeProfileButton);
