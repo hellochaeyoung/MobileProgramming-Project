@@ -22,10 +22,11 @@
         </activity>
 
         <activity android:name="kr.ac.hansung.ume.Login.AssignActivity"/>
-        <activity android:name=".View.BoardActivity"/>
+        <activity android:name=".Board.BoardActivity"/>
         <activity android:name=".Chatting.ChatMessage"/>
         <activity android:name=".View.HomeActivity"/>
-
+        <activity android:name=".Board.DetailActivity"/>
+        <activity android:name=".Board.NewBoard"/>
         <service android:name="org.eclipse.paho.android.service.MqttService" />
 
     </application>
