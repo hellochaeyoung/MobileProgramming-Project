@@ -133,6 +133,7 @@ public class AssignActivity extends AppCompatActivity {
                     databaseReference.child("Member").child(id).child("name").setValue(name);
                     databaseReference.child("Member").child(id).child("sex").setValue(sex);
                     databaseReference.child("Member").child(id).child("birthday").setValue(birthday);
+                    databaseReference.child("Member").child(id).child("hasPartner").setValue("X");
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(AssignActivity.this);
                     builder.setTitle("회원가입 성공");
@@ -140,9 +141,9 @@ public class AssignActivity extends AppCompatActivity {
                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            /*Intent intent = new Intent(AssignActivity.this, LoginActivity.class);
+                            Intent intent = new Intent(AssignActivity.this, LoginActivity.class);
                             startActivity(intent);
-                            finish();*/
+                            finish();
                         }
                     });
                     builder.create().show();
@@ -156,6 +157,7 @@ public class AssignActivity extends AppCompatActivity {
                 databaseReference.child("Member").child(id).child("name").setValue(name);
                 databaseReference.child("Member").child(id).child("sex").setValue(sex);
                 databaseReference.child("Member").child(id).child("birthday").setValue(birthday);
+                databaseReference.child("Member").child(id).child("hasPartner").setValue("X");
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(AssignActivity.this);
                 builder.setTitle("회원가입 성공");
@@ -163,9 +165,9 @@ public class AssignActivity extends AppCompatActivity {
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        /*Intent intent = new Intent(AssignActivity.this, LoginActivity.class);
+                        Intent intent = new Intent(AssignActivity.this, LoginActivity.class);
                         startActivity(intent);
-                        finish();*/
+                        finish();
                     }
                 });
                 builder.create().show();
