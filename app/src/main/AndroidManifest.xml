@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Login.LoginActivity">
 
-        <activity android:name="kr.ac.hansung.ume.Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,14 +21,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="kr.ac.hansung.ume.Login.AssignActivity"/>
-        <activity android:name=".Board.BoardActivity"/>
-        <activity android:name=".Chatting.ChatMessage"/>
-        <activity android:name=".View.HomeActivity"/>
-        <activity android:name=".Board.DetailActivity"/>
-        <activity android:name=".Board.NewBoard"/>
-        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <activity android:name=".Calendar.Calendar.CalendarActivity" />
+        <activity android:name=".Calendar.Schedule.ScheduleEditActivity" />
+        <activity android:name=".Login.AssignActivity" />
+        <activity android:name=".Board.BoardActivity" />
+        <activity android:name=".Chatting.ChatMessage" />
+        <activity android:name=".View.HomeActivity" />
 
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
     </application>
 
 </manifest>
