@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nayeon/AndroidProject/Nine_UME/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "C:\\Android\\Nine_UME\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-auth-4.0.0.aar/0c43cb8d7766e014d984521be0cb3375/res/values-v26/values-v26.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-firebase-ui-auth-4.0.0.aar\\3cbc32fbc7c2e504f66753a021f13de4\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6,10,14",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/2f6300755676f4dfa9ace3058153a8da/res/values-v26/values-v26.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9d8169dde35dfe5b0e9e10f31d864e5c\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

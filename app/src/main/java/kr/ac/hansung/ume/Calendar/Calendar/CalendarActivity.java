@@ -91,7 +91,7 @@ public class CalendarActivity extends AppCompatActivity {
         gridAdapter = new GridAdapter(getApplicationContext(), dayList, changedPosition);
         gridView.setAdapter(gridAdapter);
 
-        // GridView 와 GridAdapter 생성 후 Listener 생성
+        // GridView 와 GriddAdapter 생성 후 Listener 생성
         View.OnClickListener changeMonthButtonOnClickListener = new ChangeMonthButtonOnClickListener();
         preMonthButton.setOnClickListener(changeMonthButtonOnClickListener);
         nextMonthButton.setOnClickListener(changeMonthButtonOnClickListener);

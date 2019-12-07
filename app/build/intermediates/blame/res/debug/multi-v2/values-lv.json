@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nayeon/AndroidProject/Nine_UME/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
+            "outputFile": "C:\\Android\\Nine_UME\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/7d0a375bab37df033b1d902e9e751dbf/res/values-lv/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "224",
-                        "endOffsets": "471"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4584",
-                        "endColumns": "224",
-                        "endOffsets": "4804"
-                    }
-                },
-                {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/6d76832bbc84f330e1223f71f01389a5/res/values-lv/values-lv.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "120",
-                        "startColumns": "4",
-                        "startOffsets": "12482",
-                        "endColumns": "100",
-                        "endOffsets": "12578"
-                    }
-                },
-                {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-auth-4.0.0.aar/0c43cb8d7766e014d984521be0cb3375/res/values-lv/values-lv.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-firebase-ui-auth-4.0.0.aar\\3cbc32fbc7c2e504f66753a021f13de4\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/2f6300755676f4dfa9ace3058153a8da/res/values-lv/values-lv.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-17.0.0.aar\\5535bc6f85bc2becb6cdd254794b2c1d\\res\\values-lv\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "224",
+                        "endOffsets": "471"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4584",
+                        "endColumns": "224",
+                        "endOffsets": "4804"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9d8169dde35dfe5b0e9e10f31d864e5c\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,7 +55,24 @@
                     }
                 },
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/4bbad62719cc5f0fde8bb4579e0c6759/res/values-lv/values.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\a08d60db8a1c61d596c492c629200baa\\res\\values-lv\\values-lv.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "120",
+                        "startColumns": "4",
+                        "startOffsets": "12482",
+                        "endColumns": "100",
+                        "endOffsets": "12578"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\68e8c8204931a16f7bbaef3f7502f1ca\\res\\values-lv\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

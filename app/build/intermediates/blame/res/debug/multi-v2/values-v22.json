@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nayeon/AndroidProject/Nine_UME/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "outputFile": "C:\\Android\\Nine_UME\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/2f6300755676f4dfa9ace3058153a8da/res/values-v22/values-v22.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9d8169dde35dfe5b0e9e10f31d864e5c\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

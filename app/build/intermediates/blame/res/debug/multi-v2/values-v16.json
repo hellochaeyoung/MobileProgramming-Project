@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nayeon/AndroidProject/Nine_UME/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "C:\\Android\\Nine_UME\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/2f6300755676f4dfa9ace3058153a8da/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9d8169dde35dfe5b0e9e10f31d864e5c\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/nayeon/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/6d76832bbc84f330e1223f71f01389a5/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\a08d60db8a1c61d596c492c629200baa\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

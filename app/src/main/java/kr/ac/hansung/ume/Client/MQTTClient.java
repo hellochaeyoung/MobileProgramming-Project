@@ -25,7 +25,7 @@ public class MQTTClient {
     private HomeActivity homeActivity;
     private MqttClient client;
     private String clientID;
-    private final String BROKER_ADDRESS = "tcp://" + "192.168.0.11" + ":1883";
+    private final String BROKER_ADDRESS = "tcp://" + "192.168.56.1" + ":1883";
     //private final String BROKER_ADDRESS = "tcp://" + "192.168.0.104" + ":1883";
     private String topic_message;
 

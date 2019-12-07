@@ -27,6 +27,9 @@
         <activity android:name=".Board.BoardActivity" />
         <activity android:name=".Chatting.ChatMessage" />
         <activity android:name=".View.HomeActivity" />
+        <activity android:name=".Board.NewBoard"/>
+        <activity android:name=".Board.DetailActivity"/>
+
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />
     </application>
