@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorGray"
     tools:context=".Calendar.Schedule.ScheduleEditActivity">
 
     <TextView
@@ -68,9 +69,9 @@
         <Button
             android:id="@+id/timePickerButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
-            android:text="Time Pick" />
+            android:background="@drawable/clock" />
 
         <TextView
             android:id="@+id/pickedTimeTextView"
@@ -86,22 +87,45 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
+        <LinearLayout
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+
         <Button
             android:id="@+id/editButton"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="Add" />
+            android:background="@drawable/playlist" />
+
+        <LinearLayout
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
 
         <Button
             android:id="@+id/closeButton"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="Close" />
+            android:background="@drawable/logout" />
+
+        <LinearLayout
+            android:layout_width="74dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical"></LinearLayout>
 
 </LinearLayout>

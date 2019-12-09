@@ -164,7 +164,6 @@ public class ChatMessage extends AppCompatActivity {
         homeButton = (Button)findViewById(R.id.homeButton);
         boardButton = (Button)findViewById(R.id.boardButton);
         chatButton = (Button)findViewById(R.id.chatButton);
-        albumButton = (Button)findViewById(R.id.albumButton);
         calendarButton = (Button)findViewById(R.id.calendarButton);
     }
     public void setListener(){

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorEmerald">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,42 +40,48 @@
 
         </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteY="10dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/message"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/sendBtn"
-                    android:layout_width="68dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:text="@string/fui_button_text_send" />
-            </LinearLayout>
-
-        </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sendBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/send" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,7 +95,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="HOME" />
+            android:text="HOME"
+            android:background="@color/colorPrimary"
+            android:textSize="13sp"/>
 
         <Button
             android:id="@+id/boardButton"
@@ -96,7 +105,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="BOARD" />
+            android:text="BOARD"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="13sp"/>
 
         <Button
             android:id="@+id/chatButton"
@@ -105,15 +116,8 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="CHATTING"
-            android:textSize="10sp" />
-
-        <Button
-            android:id="@+id/albumButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="ALBUM" />
+            android:background="@color/colorCoral"
+            android:textSize="13sp" />
 
         <Button
             android:id="@+id/calendarButton"
@@ -122,7 +126,8 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="CALENDAR"
-            android:textSize="8sp" />
+            android:background="@color/colorPrimaryDark"
+            android:textSize="13sp" />
     </LinearLayout>
 
 

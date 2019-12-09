@@ -1,15 +1,15 @@
 #Internal package file, do not edit.
-#Fri Dec 06 09:41:16 KST 2019
-1.base=/Users/nayeon/AndroidProject/Nine_UME/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
-2.path=classes.dex
+#Mon Dec 09 10:53:09 KST 2019
+1.base=/Users/nohseungyon/Downloads/Nine_UME/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+2.path=crashlytics-build.properties
 0.baseType=DIRECTORY
-2.base=/Users/nayeon/AndroidProject/Nine_UME/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
-2.set=DEX
+2.base=/Users/nohseungyon/Downloads/Nine_UME/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+2.set=ASSET
 1.baseType=DIRECTORY
 count=3
-1.set=ASSET
+1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=/Users/nayeon/AndroidProject/Nine_UME/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+0.base=/Users/nohseungyon/Downloads/Nine_UME/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
 2.baseType=DIRECTORY
-1.path=crashlytics-build.properties
+1.path=classes.dex

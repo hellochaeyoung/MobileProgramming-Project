@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Android\\Nine_UME\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "/Users/nohseungyon/Downloads/Nine_UME/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-auth-15.0.1.aar\\d6f3a9f2dc271dc31055909e4cd13556\\res\\values-watch-v20\\values.xml",
+                    "source": "/Users/nohseungyon/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-15.0.1.aar/c6579b8079fcd2e1f705a46e26fbaf61/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9d8169dde35dfe5b0e9e10f31d864e5c\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "/Users/nohseungyon/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/0052f482ba68d2021fa7d6cd7a4c0c56/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

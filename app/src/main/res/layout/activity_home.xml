@@ -106,7 +106,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="HOME" />
+            android:background="@color/colorPrimary"
+            android:text="HOME"
+            android:textSize="13sp"/>
 
         <Button
             android:id="@+id/boardButton"
@@ -114,7 +116,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="BOARD" />
+            android:background="@color/colorPrimaryDark"
+            android:text="BOARD"
+            android:textSize="13sp"/>
 
         <Button
             android:id="@+id/chatButton"
@@ -123,15 +127,8 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="CHATTING"
-            android:textSize="10sp" />
-
-        <Button
-            android:id="@+id/albumButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="ALBUM" />
+            android:background="@color/colorGreen"
+            android:textSize="13sp" />
 
         <Button
             android:id="@+id/calendarButton"
@@ -140,7 +137,8 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="CALENDAR"
-            android:textSize="8sp" />
+            android:background="@color/colorPrimary"
+            android:textSize="13sp" />
     </LinearLayout>
 
 

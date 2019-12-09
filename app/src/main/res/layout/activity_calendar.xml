@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="@color/colorGray">
 
 
     <LinearLayout
@@ -17,17 +17,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="PRE" />
+            android:background="@drawable/left2" />
 
         <TextView
             android:id="@+id/dateTextView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6"
-            android:background="@color/colorWhite"
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:text="Hello, World!"
+            android:background="@color/colorGray"
             android:textAlignment="center"
             android:textColor="@color/colorBlack"
             android:textSize="20sp" />
@@ -37,7 +37,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="NEXT" />
+            android:background="@drawable/right" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,6 +53,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="SUN"
+            android:textColor="@color/colorRed"
             android:textAlignment="center"
             android:textSize="18sp" />
 
@@ -113,6 +114,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="SAT"
+            android:textColor="@color/colorBlue"
             android:textAlignment="center"
             android:textSize="18sp" />
     </LinearLayout>

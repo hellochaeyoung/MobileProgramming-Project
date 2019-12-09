@@ -37,6 +37,8 @@
         <activity android:name="kr.ac.hansung.ume.Board.BoardActivity" />
         <activity android:name="kr.ac.hansung.ume.Chatting.ChatMessage" />
         <activity android:name="kr.ac.hansung.ume.View.HomeActivity" />
+        <activity android:name="kr.ac.hansung.ume.Board.NewBoard" />
+        <activity android:name="kr.ac.hansung.ume.Board.DetailActivity" />
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />
 

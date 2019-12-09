@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Android\\Nine_UME\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
+            "outputFile": "/Users/nohseungyon/Downloads/Nine_UME/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\9d8169dde35dfe5b0e9e10f31d864e5c\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "/Users/nohseungyon/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/0052f482ba68d2021fa7d6cd7a4c0c56/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\이나현\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\a08d60db8a1c61d596c492c629200baa\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "/Users/nohseungyon/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/2bc1294afecc5d5cf06558b9667e32c1/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
