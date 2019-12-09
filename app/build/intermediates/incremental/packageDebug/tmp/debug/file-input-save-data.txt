@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Dec 09 10:53:09 KST 2019
+#Mon Dec 09 11:48:55 KST 2019
 1.base=/Users/nohseungyon/Downloads/Nine_UME/app/build/intermediates/dex/debug/mergeExtDexDebug/out
 2.path=crashlytics-build.properties
 0.baseType=DIRECTORY

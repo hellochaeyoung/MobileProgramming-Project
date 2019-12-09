@@ -187,7 +187,7 @@ public class BoardActivity extends AppCompatActivity {
                     System.out.println(newItem.getItemcontent()+"contentlater");
                     System.out.println(adapter.getItem(0));
                 }
-                System.out.println(adapter.getItem(1));
+                //System.out.println(adapter.getItem(1));
                 lastIndex++;
 
             }
